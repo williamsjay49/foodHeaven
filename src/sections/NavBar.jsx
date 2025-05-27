@@ -32,7 +32,11 @@ const NavBar = () => {
             ))}
           </ul>
         </nav>
-        <Button text="Get Started" />
+        <a href="#contact" className="contact-btn group">
+          <div className="inner">
+            <span className="contact-btn-span">Get Started</span>
+          </div>
+        </a>
       </div>
     </header>
   );

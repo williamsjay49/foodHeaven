@@ -25,6 +25,18 @@ section {
   --color-orange: #ff5231;
 }
 
+@layer base {
+  h1 {
+    @apply font-semibold text-5xl md:text-6xl text-light-primary;
+  }
+  p {
+    @apply text-light-secondary text-base font-normal;
+  }
+  span {
+    @apply md:font-semibold font-medium text-2xl text-orange;
+  }
+}
+
 @layer utilities {
   .flex-center {
     @apply flex justify-center items-center;
@@ -32,6 +44,9 @@ section {
 }
 
 @layer components {
+  .section-padding {
+    @apply px-5 md:px-10 md:mt-40 mt-20;
+  }
   .padding-x {
     @apply px-5 md:px-10;
   }
@@ -76,5 +91,28 @@ section {
         }
       }
     }
+
+    .contact-btn {
+      @apply flex;
+
+      .inner {
+        @apply px-5 py-2 rounded-full bg-orange;
+      }
+
+      span {
+        @apply text-dark-primary text-xl font-medium;
+      }
+    }
+  }
+
+  .hero-layout {
+    @apply relative z-10 xl:mt-20 mt-32 md:h-dvh h-[80vh] flex flex-col md:flex-row xl:items-center items-start justify-center;
+  }
+  .cta-wrapper {
+    @apply relative z-20 cursor-pointer;
+  }
+
+  .cta-button {
+    @apply px-4 py-4 rounded-full bg-orange flex justify-center items-center relative cursor-pointer overflow-hidden transition-transform duration-300 hover:scale-105;
   }
 }
